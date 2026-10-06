@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-2
     steps:
       - uses: actions/checkout@v3
 
@@ -29,7 +29,7 @@ jobs:
         run: pre-commit run -a
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-2
     strategy:
       matrix:
         go-version: ["1.20", "1.21"]
